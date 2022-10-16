@@ -1,11 +1,11 @@
 //- Copyright (C) 2018-2022 Chatopera Inc, <https://www.chatopera.com>
-//- 
+//-
 //- Licensed under the Apache License, Version 2.0 (the "License");
 //- you may not use this file except in compliance with the License.
 //- You may obtain a copy of the License at
-//- 
+//-
 //-  http://www.apache.org/licenses/LICENSE-2.0
-//- 
+//-
 //-  Unless required by applicable law or agreed to in writing, software
 //- distributed under the License is distributed on an "AS IS" BASIS,
 //-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -507,7 +507,7 @@ html
             });
 
             socket.on('disconnect', function () {
-                output('<span id="connect-message">连接坐席失败，在线咨询服务不可用</span>', 'message connect-message');
+                output('<span id="connect-message">Failed to connect to the agent, the online consultation service is not available</span>', 'message connect-message');
             });
             function sendDisconnect() {
                 socket.disconnect();
@@ -559,7 +559,7 @@ html
                     $("#message").val("");
                     wordinx = 0;
                 } else if (service_end == true) {
-                    alert("服务器已断开和您的对话");
+                    alert("The server has disconnected from your conversation");
                 }
                 closeFaceDialog(0);
             }
